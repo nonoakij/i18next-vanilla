@@ -101,16 +101,9 @@ export const resources = {
   },
 } as const;
 
-i18next.init({
-  lng: "en",
-  ns: ["ns1", "ns2", "ns3", "ns4", "ns5", "ns6"],
-  resources,
-});
-
 await i18next.init({
   lng: "en",
-  debug: true,
-  returnNull: false,
+  resources,
 });
 
 document.getElementById("app")!.innerHTML = i18next.t("key", { ns: "ns1" });
