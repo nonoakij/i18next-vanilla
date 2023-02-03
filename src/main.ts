@@ -49,6 +49,8 @@ import ns45 from "../locales/en/ns45.json";
 import ns46 from "../locales/en/ns46.json";
 import ns47 from "../locales/en/ns47.json";
 
+export const defaultNS = "ns1";
+
 export const resources = {
   en: {
     ns1,
@@ -102,6 +104,7 @@ export const resources = {
 } as const;
 
 await i18next.init({
+  defaultNS,
   lng: "en",
   resources,
 });
